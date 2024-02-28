@@ -8,8 +8,11 @@ const URL = process.env.NODE_ENV === "production"? "https://mern-connection-serv
 export default defineConfig({
   plugins: [react()],
   server:{
-      proxy:{
-        "/api":URL
+    proxy: {
+      '/api': {
+        target: URL,
+        changeOrigin: true,
       },
+    },
   },
 })
