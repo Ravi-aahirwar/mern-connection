@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [data, setData] = useState([])
   useEffect(()=>{
-    fetch("https://mern-connection-server.vercel.app/api/data").then(res => res.json()).then(db => setData(db))
+    fetch("/api/data").then(res => res.json()).then(db => setData(db))
     .catch((error) => {
       console.log(error)
     })
