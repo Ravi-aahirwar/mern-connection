@@ -11,7 +11,7 @@ function App() {
   useEffect(()=>{
     fetch(`${url}/api/data`).then(res => res.json()).then(db => setData(db))
     .catch((error) => {
-      console.log(error)
+      alert(error.message)
     })
   },[])
 
